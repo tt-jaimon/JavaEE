@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+        <title>#{indexController.pageTitle}</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body class="main-body">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <h:link value="Save Native Animals" outcome="/public/index" class="navbar-brand"/>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><h:link value="Home" outcome="/public/index"/></li>
+                <li><h:link value="Regions" outcome="/public/view/regions"/></li>
+                <li><h:link value="Animals" outcome="/public/view/animals"/></li>
+                <li><h:link value="Events" outcome="/public/view/events"/></li>
+                <li><h:link value="Sponsors" outcome="/public/view/sponsors"/></li>
+                <li><h:link value="Advanced Filter" outcome="/public/view/advancedFilter"/></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                   <li><h:link value="Logout" outcome="/faces/logout"/></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="jumbotron text-center">
+            <h1>Save Native Animals</h1>
+          </div>
+        <div class="container text-center intro-font-color">
+                <h1 style="font-size: 50px;">Introduction</h1>
+                <h3>In this Web application Save Native Animals created by LocalHeritage Pty Ltd an
+Australian Local Indigenous Heritage Non-Governmental Organisation (NGO)
+people will be able to view which are the native animals in a particular region and
+their status like whether they are endangered or found in abundant.
+                </h3>
+          </div>
+          <div>
+            <br></br>
+          </div>
+          <div class="container text-center intro-font-color">
+            <div class = "row">
+              <h1 style="font-size: 50px;">Region Wise</h1>
+                <div class="col-sm-4 text-center">
+                    <div>
+                        <br></br><br></br>
+                      </div>
+                  <h3>View all available Regions</h3>
+                </div>
+                <div class="col-sm-8 text-center">
+                  <img src ="../resources/images/1.JPG" width = "90%"/>
+                  <p>Figure 1</p>
+                </div>
+            </div>
+            <div class = "row">
+              <h1 style="font-size: 50px;">Animal Wise</h1>
+                <div class="col-sm-8 text-center">
+                    <img src ="../resources/images/3.JPG" width = "90%"/>
+                    <p>Figure 2</p>
+                  </div>
+                <div class="col-sm-4 text-center">
+                    <div>
+                        <br></br><br></br>
+                      </div>
+                  <h3>View All Available animals
+                  </h3>
+                </div>
+            </div>
+            <div class = "row">
+              <h1 style="font-size: 50px;">Events Wise</h1>
+                  <div class="col-sm-4 text-center">
+                      <div>
+                          <br></br><br></br>
+                        </div>
+                    <h3>View Upcoming events in this sections tab
+                    </h3>
+                  </div>
+                  <div class="col-sm-8 text-center">
+                      <img src ="../resources/images/2.JPG" width = "100%"/>
+                      <p>Figure 3</p>
+                    </div>
+              </div>
+              
+        </div>
+        <div class="jumbotron text-center">
+            <h2>Try WebApp -- Explore More -- Take Measure</h2>
+        </div>
+    </h:body>
+</html>
+

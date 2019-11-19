@@ -1,0 +1,48 @@
+div.tooltip{
+    position: absolute;
+    text-align:center;
+    background:white;
+}
+.main-body{
+    background:black;
+}
+.intro-font-color{
+    color:white;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+    background-color:#212121
+}
+.has-error{
+    color:red
+}
+.table{
+         color:white;   
+}
+.table-hover>tbody>tr:hover{
+        background-color: #2CFF00;
+        color:black
+}
+.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{
+        border-top:0px solid #ddd
+}
+
+.inactive-font-color{
+    color:white;
+}
+.active-font-color{
+    color:#2CFF00;
+}
+.btn{
+    background-color:black;
+     color:white;   
+}
+.btn-secondary:hover {
+    background-color: #2CFF00;
+  }
+.btn-secondary_hover {
+    background-color: #2CFF00;
+  }
+.active{
+    background-color: #2CFF00;
+    color: black
+}

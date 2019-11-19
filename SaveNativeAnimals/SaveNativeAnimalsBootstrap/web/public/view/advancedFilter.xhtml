@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"   
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+        <title>#{indexController.pageTitle}</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body class="main-body">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <h:link value="Save Native Animals" outcome="/public/index" class="navbar-brand"/>
+              </div>
+              <ul class="nav navbar-nav">
+                <li><h:link value="Home" outcome="/public/index"/></li>
+                <li><h:link value="Regions" outcome="/public/view/regions"/></li>
+                <li><h:link value="Animals" outcome="/public/view/animals"/></li>
+                <li><h:link value="Events" outcome="/public/view/events"/></li>
+                <li><h:link value="Sponsors" outcome="/public/view/sponsors"/></li>
+                <li class="active"><h:link value="Advanced Filter" outcome="/public/view/advancedFilter"/></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                   <li><h:link value="Logout" outcome="/logout"/></li>
+              </ul>
+            </div>
+          </nav>
+
+
+          <div class="jumbotron text-center">
+            <h1>Save Native Animals</h1>
+            <h2>Advanced Filter</h2>
+          </div>
+         
+
+        <div class="container intro-font-color text-center">
+              <div class="row">
+                <div>
+                    <a><h:link class="btn btn-secondary" value="Search Animals" outcome="/public/view/searchAnimals"/></a>
+                </div>
+              </div>
+        </div>
+
+    </h:body>
+</html>
+

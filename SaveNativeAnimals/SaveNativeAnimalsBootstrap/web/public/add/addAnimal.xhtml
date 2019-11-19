@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    <h:head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+        <title>#{indexController.pageTitle}</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body class="main-body">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <h:link value="Save Native Animals" outcome="/public/index" class="navbar-brand"/>
+              </div>
+              <ul class="nav navbar-nav">
+                <li><h:link value="Home" outcome="/public/index"/></li>
+                <li><h:link value="Regions" outcome="/public/view/regions"/></li>
+                <li class="active"><h:link value="Animals" outcome="/public/view/animals"/></li>
+                <li><h:link value="Events" outcome="/public/view/events"/></li>
+                <li><h:link value="Sponsors" outcome="/public/view/sponsors"/></li>
+                <li><h:link value="Advanced Filter" outcome="/public/view/advancedFilter"/></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                   <li><h:link value="Logout" outcome="/faces/logout"/></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="jumbotron text-center">
+            <h1>Save Native Animals</h1>
+            <h2>Animals</h2>
+          </div>
+        
+        <div class="container intro-font-color text-center ">
+            <h:form>
+              <h1>Animal Details</h1>
+              <div class="form-group row #{!animalName.valid ? 'has-error' : 'none'}">
+                <label for="animalName" class="col-sm-2 col-form-label">Animal Name</label>
+                <div class="col-sm-6">
+                    <h:inputText id="animalName" class="form-control" label="addAnimal" size="32" value="#{animal.animalName}" binding="#{animalName}"
+                                 a:placeholder="Animal Name" required="true" requiredMessage="Please enter Animal Name!" validatorMessage="Please enter a valid Animal Name">
+                        <f:validateRegex pattern="^([a-zA-Z ])+" />
+                    </h:inputText> 
+                    <h:message for="animalName" class="#{!animalName.valid ? 'has-error' : 'none'}" />
+                </div>
+              </div>
+              <div class="form-group row #{!animalDescription.valid ? 'has-error' : 'none'}">
+                <label for="animalDescription" class="col-sm-2 col-form-label">Animal Description</label>
+                <div class="col-sm-6">
+                    <h:inputText id="animalDescription" class="form-control" label="addAnimal" size="32" value="#{animal.animalDescription}" binding="#{animalDescription}"
+                                 a:placeholder="animalDescription" required="true" requiredMessage="Please enter Animals Description!" validatorMessage="Please enter a valid Animal Description">
+                        <f:validateRegex pattern="^([.,\/*%@:a-zA-Z0-9 ])+" />                    
+                    </h:inputText>
+                    <h:message for="animalDescription" class="#{!animalDescription.valid ? 'has-error' : 'none'}" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Regions</label>
+                <div class="col-sm-6">
+                    <h:selectOneMenu  id="animalRegions" value="#{animal.regionID}" converter="region" required="true" requiredMessage="Please enter Animals Region!">
+                                <f:selectItem itemValue="#{null}" itemLabel="--select--" />
+                                <f:selectItems value="#{regionManagedBean.allRegions}" var="animalRegions"  
+                                               itemLabel="#{animalRegions.regionName}" itemValue="#{animalRegions}" />
+                            </h:selectOneMenu>
+                </div>
+              </div>
+                    
+              
+              
+              <div class="form-group row">
+                <div class="col-sm-10">
+                    <h:commandButton id="submit" value="Add Animal" action="#{animalManagedBean.addAnimal(animal,false)}" class="btn btn-secondary" />
+                </div>
+              </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>
